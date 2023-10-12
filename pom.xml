@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.phuongnam</groupId>
+    <artifactId>math-util-mvn</artifactId>
+    <version>6.8</version>
+    <packaging>jar</packaging>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>18</maven.compiler.source>
+        <maven.compiler.target>18</maven.compiler.target>
+        <exec.mainClass>com.phuongnam.mathutil.man.Main</exec.mainClass>
+    </properties>
+    
+    <dependencies>
+        <!-- day la noi khai bao cac thu vien se dung trong code thu vien ke tu nay duoc goi la dependency
+        Khai bao json, jbdc, api, jwt.... -cac thu vien dung trong code cua minh o day
+        Khai bao bang cach len kho tong lay khai bao mau dem ve.Mot thu vien co
+        3 info de xac dinh duy nhat 1 file .jar :groupId, to chuc
+        -->
+        <!-- https://mvnrepository.com/artifact/com.microsoft.sqlserver/mssql-jdbc -->
+        <dependency>
+            <groupId>com.microsoft.sqlserver</groupId>
+            <artifactId>mssql-jdbc</artifactId>
+            <version>12.3.0.jre20-preview</version>
+        </dependency>
+        
+        <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>5.10.0</version>
+            <scope>test</scope>
+        </dependency>
+
+
+    
+    
+    </dependencies>
+    <!--phan build/plugin la noi khai bao cac thi vien dang rieng cho maven no chay khi no dong goi app
+       It khi chay  phan nay, 99% khai bao o <dependencies> o tren  noi cung cap cac class cho viec viet code
+    -->
+    <build>
+        <plugins>
+            <plugin>
+                <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-jar-plugin -->
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.1.1</version>
+            </plugin>
+            
+            <plugin>
+                <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
+
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.1.2</version>
+
+            </plugin>
+        </plugins>
+    </build>
+        
+</project>
